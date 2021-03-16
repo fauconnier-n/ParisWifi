@@ -11,9 +11,9 @@ The challenge of this forecast is the presence an **abrupt change in the time se
 
 ***
 
-## Results
+## Best model
 
-We find that **Holt's Winters exponential smoothing** performs the best regarding the RMSEs : 
+We find that **Holt-Winters exponential smoothing** performs the best regarding the RMSEs : 
 ![](https://github.com/fauconnier-n/ParisWifi/blob/master/Images/RMSE.jpg)  
 *See the notebook for additional models*
 
@@ -23,7 +23,7 @@ We find that **Holt's Winters exponential smoothing** performs the best regardin
 ### The daily saisonnal decomposition of the serie:
 ![](https://github.com/fauconnier-n/ParisWifi/blob/master/Images/daily_decomp.png)
 
-### The model: Holt's Winters exponential smoothing
+### The model: Holt-Winters exponential smoothing
 #### Fitted values decomposition:
 ![](https://github.com/fauconnier-n/ParisWifi/blob/master/Images/HW_values_of_fitted_values.png)
 
@@ -37,4 +37,4 @@ We find that **Holt's Winters exponential smoothing** performs the best regardin
 
 We need to keep in mind that the serie seems quite noisy with no clear daily pattern during open hours. **The approach we took is very naive** in that regard (applying a simple daily pattern and a trend). The Wifi usage is **dependant of other external variables** not taken into account (current weather, bank holiday, amount of tourists in Paris that day, etc). Using external data or having a few years of consistent data would obviously help.
 
-Therefore, our approach is very **limited and incomplete**, even if it produces *decent* short term forecasts. Its **naivety**, the fact that the models all have been trained on a **VERY short time window**, the **noisyness of the serie**, are all servere weaknesses to our models that make them **unsuitable for long term predictions**.
+Therefore, our approach is very **limited and incomplete**, even if it produces *decent* short term forecasts. Its **naivety**, the fact that the models all have been trained on a **VERY short time window**, the **noisyness of the serie**, are all servere weaknesses to our models. They are **unsuitable for long term predictions** by design (only using daily seasonality).
