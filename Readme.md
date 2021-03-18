@@ -15,7 +15,7 @@ The challenge of this forecast is the presence an **abrupt change in the time se
 
 We find that **Holt-Winters exponential smoothing** performs the best regarding the RMSEs : 
 ![](https://github.com/fauconnier-n/ParisWifi/blob/master/Images/RMSE.jpg)  
-*See the notebook for additional models*
+*See the attached notebook for additional models*
 
 ### The time serie:
 ![](https://github.com/fauconnier-n/ParisWifi/blob/master/Images/TS.png)
